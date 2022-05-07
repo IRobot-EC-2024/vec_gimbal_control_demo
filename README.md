@@ -12,6 +12,7 @@
 
 
 # 2 构建
+依赖：libusblibus (https://github.com/libusb/libusb)，参考博客 (https://blog.csdn.net/jiacong_wang/article/details/106720863?spm=1001.2014.3001.5502)   \
 注意执行单步构建时skider_hw、skider_sensor、skider_gimbal_demo依赖于skider_interface、skider_excutor
 
 # 3 运行
