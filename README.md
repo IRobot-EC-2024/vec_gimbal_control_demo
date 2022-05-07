@@ -1,12 +1,15 @@
 # 1 工程结构
--firmware$~~~~~~~~~~~~~stm32固件   \
-$~~~(根据IRbot2022电控组云台框架进行构建：https://github.com/Qylann/gimbal-standard)    \
--src$~~~~~~~~~~~~~~~~~~ROS2 packages   \
-$~~~-skider_interface$~~~~~skider执行层和指令层自定义通信接口  \
-$~~~-skider_excutor$~~~~~~~skider执行层内部自定义通信接口  \
-$~~~-skider_hw$~~~~~~~~~~~~底层接口通信包，存放用于和下位机通信的节点  \
-$~~~-skider_sensor$~~~~~~~~传感器处理包，存放传感器的数据处理节点  \
-$~~~-skider_gimbal_demo$~~~云台控制器DEMO包，存放了一个简单的云台控制DEMO节点  \
+
+├── firmware: stm32固件，根据IRbot2022电控组云台框架进行构建 https://github.com/Qylann/gimbal-standard
+└── src
+&emsp;&emsp;├── skider_interface: skider执行层和指令层自定义通信接口
+&emsp;&emsp;├── skider_excutor: skider执行层内部自定义通信接口
+&emsp;&emsp;├── skider_hw: 底层通信包，存放底层接口通信节点
+&emsp;&emsp;├── skider_sensor: 传感器处理包，存放传感器的数据处理节点
+&emsp;&emsp;└── skider_gimbal_demo: 云台控制器DEMO包，存放了一个简单的云台控制DEMO节点
+
+
+
 
 # 2 构建
 注意执行单步构建时skider_hw、skider_sensor、skider_gimbal_demo依赖于skider_interface、skider_excutor
