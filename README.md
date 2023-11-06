@@ -1,4 +1,5 @@
-# 1 工程结构
+# 视控一体云台demo
+## 1.代码结构
 
 ├── firmware: stm32固件，根据IRbot2022电控组云台框架进行构建 https://github.com/Qylann/gimbal-standard  \
 └── src \
@@ -11,12 +12,12 @@
 
 
 
-# 2 构建
+#@ 2 构建
 依赖：libusblibus (https://github.com/libusb/libusb)    \
 libusb安装的参考博客: https://blog.csdn.net/jiacong_wang/article/details/106720863?spm=1001.2014.3001.5502   \
 注意执行单步构建时skider_hw、skider_sensor、skider_gimbal_demo依赖于skider_interface、skider_excutor
 
-# 3 运行
+## 3 运行
 在launch skider_hw之前需要赋权usb。 \
 查看usb设备
 ```
@@ -32,4 +33,7 @@ Bus 003 Device 009: ID 0483:5740 STMicroelectronics Virtual COM Port
 sudo chmod 777 /dev/bus/usb/003/*
 ```
 然后依次launch skider_hw、skider_sensor、skider_gimbal_demo
+
+## 4. ROS环境
+- ROS2 galcatic (目前发现foxy编译不过，待寻找bug)
 
